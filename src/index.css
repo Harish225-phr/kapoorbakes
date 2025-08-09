@@ -18,10 +18,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 25 15% 15%;
 
-    /* Primary - Light Pink Theme */
-    --primary: 340 70% 75%;
+    /* Primary - Darker Pink Theme */
+    --primary: 340 75% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 340 60% 85%;
+    --primary-glow: 340 65% 70%;
 
     /* Secondary - Warm Cream */
     --secondary: 35 40% 92%;
