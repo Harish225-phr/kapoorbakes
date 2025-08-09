@@ -59,8 +59,8 @@ const Index = () => {
           </p>
           <Link to="/menu">
             <Button 
-              size="lg" 
-              className="bg-gradient-primary text-white px-8 py-4 text-lg hover:shadow-strong transition-all duration-300 hover:scale-105 animate-scale-in"
+             size="lg" 
+                  className="bg-gradient-primary hover:shadow-strong transition-all duration-500 hover:scale-110 btn-ripple hover-shine animate-bounce-in group"
             >
               Explore Menu
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -138,9 +138,6 @@ const Index = () => {
                 className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-all duration-500 hover:scale-105 hover-tilt"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg group-hover:from-primary/20 transition-all duration-500"></div>
-              <div className="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                Fresh Daily
-              </div>
             </div>
           </div>
         </div>
@@ -210,7 +207,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105"
+                className="border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105"
               >
                 Contact Us
               </Button>

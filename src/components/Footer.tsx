@@ -9,19 +9,19 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Logo and Copyright */}
           <div className="text-center md:text-left">
-            <Link 
-              to="/" 
-              className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent"
-            >
-              Kapoor Bakers
-            </Link>
+             <Link 
+            to="/" 
+            className="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-300"
+          >
+            Kapoor Bakers
+          </Link>
             <p className="text-sm text-muted-foreground mt-1">
               © {currentYear} Kapoor Bakers. All rights reserved.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="flex space-x-6">
+          <div className="flex space-x-9">
             <Link 
               to="/about" 
               className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -42,7 +42,7 @@ const Footer = () => {
             </Link>
             <Link 
               to="/visit" 
-              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300" style={{marginRight: '2.8rem'}}
             >
               Visit Us
             </Link>

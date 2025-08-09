@@ -126,9 +126,6 @@ const About = () => {
                 className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-all duration-500 hover:scale-105 hover-tilt"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg group-hover:from-primary/20 transition-all duration-500"></div>
-              <div className="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                Handcrafted
-              </div>
             </div>
             
             <div className="animate-slide-up lg:order-2">

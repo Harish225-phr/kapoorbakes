@@ -10,7 +10,7 @@ const WhatsAppFloat = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BC5A] text-white p-4 rounded-full shadow-strong hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse hover:animate-none"
+      className="fixed bottom-8 right-2 z-50 bg-[#25D366] hover:bg-[#20BC5A] text-white p-4 rounded-full shadow-strong hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse hover:animate-none"
       aria-label="Contact us on WhatsApp"
       title="Chat with us on WhatsApp"
     >
