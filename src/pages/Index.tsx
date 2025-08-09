@@ -52,7 +52,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Welcome to <span className="bg-gradient-primary bg-clip-text text-transparent">Kapoor Bakers</span>
+            Welcome to <span className="text-primary">Kapoor Bakers</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 animate-slide-up">
             Fresh. Handmade. Irresistible.

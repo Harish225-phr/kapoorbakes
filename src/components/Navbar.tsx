@@ -24,7 +24,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
+            className="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-300"
           >
             Kapoor Bakers
           </Link>
