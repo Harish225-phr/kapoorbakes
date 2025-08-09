@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -6,8 +7,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import emailjs from "emailjs-com";
 
-const Contact = () => {
+function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,16 +27,29 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
+    emailjs
+      .send(
+        "service_2ytaqxr", // from EmailJS
+        "template_ceztw48", // from EmailJS
+        formData,
+        "FwuZM02BfUjy-iFH8" // from EmailJS
+      )
+      .then(() => {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setIsSubmitting(false);
+      })
+      .catch(() => {
+        toast({
+          title: "Failed to send message.",
+          description: "Please try again.",
+          variant: "destructive"
+        });
+        setIsSubmitting(false);
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
   };
 
   const contactInfo = [
@@ -72,9 +87,6 @@ const Contact = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             Get in Touch
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-slide-up">
-            We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-          </p>
         </div>
       </section>
 
@@ -95,21 +107,21 @@ const Contact = () => {
                     style={{ animationDelay: `${index * 0.15}s` }}
                   >
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0 hover-glow group-hover:animate-pulse-slow">
-                      <info.icon className="w-6 h-6 text-white transform group-hover:scale-110 transition-transform duration-300" />
+                      <info.icon className="w-6 h-6 text-white transform group-hover:scale-110 transition duration-300" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition duration-300">
                         {info.title}
                       </h3>
                       {info.action ? (
                         <a 
                           href={info.action}
-                          className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-shine group-hover:scale-105 inline-block transform transition-transform duration-300"
+                          className="text-muted-foreground hover:text-primary transition hover-shine group-hover:scale-105 inline-block transform duration-300"
                         >
                           {info.details}
                         </a>
                       ) : (
-                        <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">{info.details}</p>
+                        <p className="text-muted-foreground group-hover:text-foreground transition duration-300">{info.details}</p>
                       )}
                     </div>
                   </div>
@@ -118,28 +130,28 @@ const Contact = () => {
 
               {/* Why Contact Us */}
               <div className="mt-12 p-6 bg-secondary/30 rounded-lg animate-bounce-in hover-lift group">
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition duration-300">
                   Why Contact Us?
                 </h3>
-                <ul className="space-y-2 text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                  <li className="hover:text-primary transition-colors duration-200">• Custom cake orders for special occasions</li>
-                  <li className="hover:text-primary transition-colors duration-200">• Bulk orders for events and parties</li>
-                  <li className="hover:text-primary transition-colors duration-200">• Special dietary requirements</li>
-                  <li className="hover:text-primary transition-colors duration-200">• Catering services</li>
-                  <li className="hover:text-primary transition-colors duration-200">• General inquiries and feedback</li>
+                <ul className="space-y-2 text-muted-foreground group-hover:text-foreground transition duration-300">
+                  <li className="hover:text-primary transition duration-200">• Custom cake orders for special occasions</li>
+                  <li className="hover:text-primary transition duration-200">• Bulk orders for events and parties</li>
+                  <li className="hover:text-primary transition duration-200">• Special dietary requirements</li>
+                  <li className="hover:text-primary transition duration-200">• Catering services</li>
+                  <li className="hover:text-primary transition duration-200">• General inquiries and feedback</li>
                 </ul>
               </div>
             </div>
 
             {/* Contact Form */}
             <Card className="p-8 shadow-medium hover:shadow-strong transition-all duration-500 animate-slide-up border-0 bg-card group hover-tilt">
-              <h2 className="text-3xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors duration-300">
+              <h2 className="text-3xl font-bold text-foreground mb-6 group-hover:text-primary transition duration-300">
                 Send us a Message
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="group-hover:text-primary transition-colors duration-300">Full Name</Label>
+                  <Label htmlFor="name" className="group-hover:text-primary transition duration-300">Full Name</Label>
                   <Input
                     id="name"
                     name="name"
@@ -153,7 +165,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="group-hover:text-primary transition-colors duration-300">Email Address</Label>
+                  <Label htmlFor="email" className="group-hover:text-primary transition duration-300">Email Address</Label>
                   <Input
                     id="email"
                     name="email"
@@ -167,7 +179,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="group-hover:text-primary transition-colors duration-300">Subject</Label>
+                  <Label htmlFor="subject" className="group-hover:text-primary transition duration-300">Subject</Label>
                   <Input
                     id="subject"
                     name="subject"
@@ -181,7 +193,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="group-hover:text-primary transition-colors duration-300">Message</Label>
+                  <Label htmlFor="message" className="group-hover:text-primary transition duration-300">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -207,6 +219,6 @@ const Contact = () => {
       </section>
     </div>
   );
-};
+}
 
 export default Contact;
