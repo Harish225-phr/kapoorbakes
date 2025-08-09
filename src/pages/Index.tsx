@@ -85,16 +85,16 @@ const Index = () => {
             {features.map((feature, index) => (
               <Card 
                 key={index} 
-                className="p-8 text-center hover-lift shadow-soft hover:shadow-medium transition-all duration-300 animate-scale-in border-0 bg-card"
+                className="p-8 text-center hover-lift hover-shine shadow-soft hover:shadow-strong transition-all duration-500 animate-bounce-in border-0 bg-card group"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 hover-glow">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 hover-glow animate-float group-hover:animate-pulse-slow">
+                  <feature.icon className="w-8 h-8 text-white transform group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">
+                <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                   {feature.description}
                 </p>
               </Card>
@@ -123,21 +123,24 @@ const Index = () => {
               <Link to="/menu">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-primary hover:shadow-medium transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-primary hover:shadow-strong transition-all duration-500 hover:scale-110 btn-ripple hover-shine animate-bounce-in group"
                 >
-                  View Full Menu
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <span className="relative z-10">View Full Menu</span>
+                  <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </Link>
             </div>
             
-            <div className="relative animate-slide-up">
+            <div className="relative animate-slide-left group">
               <img 
                 src={bakeryItemsImage} 
                 alt="Featured Bakery Items" 
-                className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-shadow duration-300"
+                className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-all duration-500 hover:scale-105 hover-tilt"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg group-hover:from-primary/20 transition-all duration-500"></div>
+              <div className="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+                Fresh Daily
+              </div>
             </div>
           </div>
         </div>
@@ -159,18 +162,23 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index} 
-                className="p-6 hover-lift shadow-soft hover:shadow-medium transition-all duration-300 animate-scale-in border-0 bg-card"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="p-6 hover-lift hover-tilt shadow-soft hover:shadow-strong transition-all duration-500 animate-scale-in border-0 bg-card group hover:bg-primary/5"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="flex mb-4">
+                <div className="flex mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-accent fill-current" />
+                    <Star 
+                      key={i} 
+                      className="w-5 h-5 text-accent fill-current animate-bounce-in" 
+                      style={{ animationDelay: `${(index * 0.1) + (i * 0.1)}s` }}
+                    />
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-4 italic">
+                <p className="text-muted-foreground mb-4 italic group-hover:text-foreground transition-colors duration-300 relative">
                   "{testimonial.comment}"
+                  <span className="absolute -left-2 -top-2 text-4xl text-primary/20 group-hover:text-primary/40 transition-colors duration-300">"</span>
                 </p>
-                <p className="font-semibold text-foreground">
+                <p className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                   - {testimonial.name}
                 </p>
               </Card>

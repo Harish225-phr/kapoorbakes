@@ -57,16 +57,16 @@ const About = () => {
             {whyUsFeatures.map((feature, index) => (
               <Card 
                 key={index} 
-                className="p-6 text-center hover-lift shadow-soft hover:shadow-medium transition-all duration-300 animate-scale-in border-0 bg-card"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="p-6 text-center hover-lift hover-tilt shadow-soft hover:shadow-strong transition-all duration-500 animate-bounce-in border-0 bg-card group"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 hover-glow">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 hover-glow animate-float group-hover:animate-pulse-slow">
+                  <feature.icon className="w-8 h-8 text-white transform group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                   {feature.description}
                 </p>
               </Card>
@@ -100,13 +100,16 @@ const About = () => {
               </p>
             </div>
             
-            <div className="relative animate-slide-up">
+            <div className="relative animate-slide-right group">
               <img 
                 src={bakeryTeamImage} 
                 alt="Kapoor Bakers Team" 
-                className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-shadow duration-300"
+                className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-all duration-500 hover:scale-105 hover-tilt"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg group-hover:from-primary/20 transition-all duration-500"></div>
+              <div className="absolute bottom-4 left-4 bg-white/90 text-foreground px-3 py-1 rounded-full text-sm font-medium transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                Our Expert Team
+              </div>
             </div>
           </div>
         </div>
@@ -116,13 +119,16 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative animate-fade-in lg:order-1">
+            <div className="relative animate-slide-left lg:order-1 group">
               <img 
                 src={bakeryBreadImage} 
                 alt="Artisanal Bread Making" 
-                className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-shadow duration-300"
+                className="w-full h-96 object-cover rounded-lg shadow-medium hover:shadow-strong transition-all duration-500 hover:scale-105 hover-tilt"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg group-hover:from-primary/20 transition-all duration-500"></div>
+              <div className="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+                Handcrafted
+              </div>
             </div>
             
             <div className="animate-slide-up lg:order-2">

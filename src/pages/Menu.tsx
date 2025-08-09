@@ -110,7 +110,7 @@ const Menu = () => {
               <Badge 
                 key={category} 
                 variant="secondary" 
-                className="px-4 py-2 text-sm cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors duration-300 animate-fade-in"
+                className="px-4 py-2 text-sm cursor-pointer hover:bg-primary hover:text-primary-foreground transition-all duration-300 animate-bounce-in hover:scale-110 btn-ripple hover-shine"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {category}
@@ -123,35 +123,47 @@ const Menu = () => {
             {menuItems.map((item, index) => (
               <Card 
                 key={item.id} 
-                className="overflow-hidden hover-lift shadow-soft hover:shadow-medium transition-all duration-300 animate-scale-in border-0 bg-card"
+                className="overflow-hidden hover-lift hover-tilt shadow-soft hover:shadow-strong transition-all duration-500 animate-scale-in border-0 bg-card group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
                   <img 
                     src={item.image} 
                     alt={item.name}
-                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-125"
                   />
-                  <div className="absolute top-3 right-3">
-                    <Badge variant="outline" className="bg-white/90 backdrop-blur-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute top-3 right-3 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+                    <Badge variant="outline" className="bg-white/90 backdrop-blur-sm hover-glow">
                       {item.category}
                     </Badge>
+                  </div>
+                  <div className="absolute bottom-3 left-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <span className="bg-primary text-white px-2 py-1 rounded text-sm font-medium">
+                      Fresh Baked
+                    </span>
                   </div>
                 </div>
                 
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-semibold text-foreground">
+                    <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                       {item.name}
                     </h3>
-                    <span className="text-xl font-bold text-primary">
+                    <span className="text-xl font-bold text-primary animate-pulse-slow group-hover:scale-110 transition-transform duration-300">
                       {item.price}
                     </span>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300">
                     {item.description}
                   </p>
+                  
+                  <div className="mt-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <button className="w-full bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg transition-all duration-300 text-sm font-medium">
+                      Add to Order
+                    </button>
+                  </div>
                 </div>
               </Card>
             ))}

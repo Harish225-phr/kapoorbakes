@@ -162,16 +162,16 @@ const Visit = () => {
             {directions.map((direction, index) => (
               <Card 
                 key={index} 
-                className="p-6 text-center hover-lift shadow-soft hover:shadow-medium transition-all duration-300 animate-scale-in border-0 bg-card"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="p-6 text-center hover-lift hover-tilt shadow-soft hover:shadow-strong transition-all duration-500 animate-bounce-in border-0 bg-card group"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 hover-glow">
-                  <direction.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 hover-glow animate-float group-hover:animate-pulse-slow">
+                  <direction.icon className="w-8 h-8 text-white transform group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                   {direction.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                   {direction.description}
                 </p>
               </Card>
