@@ -2,6 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Heart, Award, Clock, Users } from 'lucide-react';
 import bakeryTeamImage from '@/assets/bakery-team.jpg';
 import bakeryBreadImage from '@/assets/bakery-bread.jpg';
+import ownerPortrait from '@/assets/owner-portrait.jpg';
 
 const About = () => {
   const whyUsFeatures = [
@@ -145,6 +146,51 @@ const About = () => {
               <p className="text-lg text-muted-foreground">
                 Our dedication to quality means we never compromise on freshness, taste, or presentation. 
                 Each item that leaves our bakery represents our promise to deliver nothing but the best.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Owner Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in">
+              Meet the Owner
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-up">
+              Get to know the passionate baker behind Kapoor Bakers
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative animate-slide-left group mx-auto lg:mx-0">
+              <img 
+                src={ownerPortrait} 
+                alt="Mr. Rajesh Kapoor - Owner of Kapoor Bakers" 
+                className="w-80 h-80 object-cover rounded-full shadow-medium hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            </div>
+            
+            <div className="animate-slide-right text-center lg:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Mr. Rajesh Kapoor
+              </h3>
+              <p className="text-lg text-primary font-semibold mb-6">
+                Founder & Head Baker
+              </p>
+              <p className="text-lg text-muted-foreground mb-6">
+                With over 25 years of experience in the baking industry, Mr. Rajesh Kapoor founded 
+                Kapoor Bakers with a vision to bring authentic, fresh-baked goods to the community. 
+                His passion for traditional baking methods and commitment to quality has made our 
+                bakery a beloved local institution.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                "Every day, I wake up excited to create something special for our customers. 
+                Baking isn't just my profession—it's my passion, and I pour my heart into 
+                every recipe we make."
               </p>
             </div>
           </div>
