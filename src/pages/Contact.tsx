@@ -56,25 +56,25 @@ function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 98765 43210",
-      action: "tel:+919876543210"
+      details: "+91 8295 348 595",
+      action: "tel:+918295348595"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "hello@kapoorbakers.com",
-      action: "mailto:hello@kapoorbakers.com"
+      details: "kapoorlovish5403@gmail.com",
+      action: "mailto:kapoorlovish5403@gmail.com"
     },
     {
       icon: MapPin,
       title: "Address",
-      details: "123 Bakery Street, Delhi, India 110001",
+      details: "388 Krishna Near Kamani Chowk ITI Workshop Road Opp Sai Honda Showroom 135001",
       action: "https://maps.google.com"
     },
     {
       icon: Clock,
       title: "Hours",
-      details: "Mon-Sun: 7:00 AM - 9:00 PM",
+      details: "Mon-Sun: 7:00 AM - 10:00 PM",
       action: null
     }
   ];

@@ -1,5 +1,5 @@
 const WhatsAppFloat = () => {
-  const phoneNumber = "+919876543210"; // Replace with actual WhatsApp number
+  const phoneNumber = "+918295348595"; // Replace with actual WhatsApp number
   const message = "Hello! I'm interested in your bakery products.";
   
   const handleWhatsAppClick = () => {

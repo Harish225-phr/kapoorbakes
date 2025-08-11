@@ -5,11 +5,11 @@ import { MapPin, Clock, Phone, Car, Train, Bus } from 'lucide-react';
 const Visit = () => {
   const storeDetails = {
     name: "Kapoor Bakers",
-    address: "123 Bakery Street, Connaught Place",
-    city: "New Delhi, India 110001",
-    phone: "+91 98765 43210",
+    address: "388 Krishna Near Kamani Chowk ITI Workshop Road Opp Sai Honda Showroom 135001",
+    city: "Yamuna Nagar, Haryana",
+    phone: "+918295348595",
     hours: [
-      { day: "Monday - Friday", time: "7:00 AM - 9:00 PM" },
+      { day: "Monday - Friday", time: "7:00 AM - 10:00 PM" },
       { day: "Saturday - Sunday", time: "7:00 AM - 10:00 PM" }
     ]
   };
@@ -73,7 +73,7 @@ const Visit = () => {
                 
                 <Button 
                   className="w-full bg-gradient-primary hover:shadow-medium transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open('https://maps.google.com/?q=Connaught+Place+Delhi', '_blank')}
+                  onClick={() => window.open('https://maps.app.goo.gl/m7RhujC7SkyrqcG38', '_blank')}
                 >
                   Get Directions
                 </Button>
@@ -130,7 +130,7 @@ const Visit = () => {
             <div className="animate-slide-up">
               <Card className="h-96 lg:h-full shadow-medium hover:shadow-strong transition-shadow duration-300 overflow-hidden border-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.3936719417167!2d77.21705931507935!3d28.633308392409495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd386f429fb7%3A0x1e8081b85c3e4203!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13802.20197215029!2d77.25270220176581!3d30.13567356756385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ef97625cf69c5%3A0xaef05f6cbe1c3afc!2sKapoor%20Confectionery%20and%20Bakers!5e0!3m2!1sen!2sin!4v1754930251257!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -147,7 +147,7 @@ const Visit = () => {
       </section>
 
       {/* How to Reach Us */}
-      <section className="py-20 bg-secondary/30">
+      {/* <section className="py-20 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in">
@@ -178,7 +178,7 @@ const Visit = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 bg-background">
@@ -187,7 +187,7 @@ const Visit = () => {
             Can't Visit Today?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 animate-slide-up">
-            Place an order for pickup or ask about our delivery options in Delhi NCR
+            Place an order for pickup or ask about our delivery options in Haryana
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
             <Button 
@@ -199,7 +199,7 @@ const Visit = () => {
             <Button 
               variant="outline" 
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://wa.me/919876543210?text=Hi! I would like to inquire about delivery options.', '_blank')}
+              onClick={() => window.open('https://wa.me/918295348595?text=Hi! I would like to inquire about delivery options.', '_blank')}
             >
               WhatsApp for Delivery
             </Button>
