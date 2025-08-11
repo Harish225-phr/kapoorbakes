@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Heart, Award, Clock, Users } from 'lucide-react';
 import bakeryTeamImage from '@/assets/bakery-team.jpg';
 import bakeryBreadImage from '@/assets/bakery-bread.jpg';
-import ownerPortrait from '@/assets/owner-portrait.jpg';
+import ownerPortrait from '@/assets/Owner.jpeg';
 
 const About = () => {
   const whyUsFeatures = [
@@ -176,21 +176,16 @@ const About = () => {
             
             <div className="animate-slide-right text-center lg:text-left">
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Mr. Rajesh Kapoor
+                Mr. Lovish Kapoor
               </h3>
               <p className="text-lg text-primary font-semibold mb-6">
                 Founder & Head Baker
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                With over 25 years of experience in the baking industry, Mr. Rajesh Kapoor founded 
-                Kapoor Bakers with a vision to bring authentic, fresh-baked goods to the community. 
-                His passion for traditional baking methods and commitment to quality has made our 
-                bakery a beloved local institution.
+                Hi I am Lovish Kapoor, the proud owner of Kapoor Bakers. With over 7 years of experience in the baking industry, I have dedicated my life to perfecting the art of baking. My journey began in my Hotel Management days, where I learned the secrets of traditional recipes and techniques.
               </p>
               <p className="text-lg text-muted-foreground">
-                "Every day, I wake up excited to create something special for our customers. 
-                Baking isn't just my profession—it's my passion, and I pour my heart into 
-                every recipe we make."
+               
               </p>
             </div>
           </div>
