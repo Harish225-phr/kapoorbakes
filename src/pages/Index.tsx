@@ -14,8 +14,8 @@ const Index = () => {
     },
     {
       icon: Award,
-      title: "Award Winning",
-      description: "Recognized for excellence in traditional baking methods"
+      title: "Egg Less bakery",
+      description: "Delicious eggless options for everyone to enjoy"
     },
     {
       icon: Heart,
@@ -28,7 +28,7 @@ const Index = () => {
     {
       name: "Priya Sharma",
       rating: 5,
-      comment: "The best bakery in Delhi! Their croissants are absolutely divine."
+      comment: "The best bakery in Haryana! Their croissants are absolutely divine."
     },
     {
       name: "Raj Kumar",

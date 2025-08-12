@@ -41,7 +41,7 @@ const Visit = () => {
             Visit Our Store
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto animate-slide-up">
-            Come and experience the aroma of fresh baked goods. We're located in the heart of Delhi.
+            Come and experience the aroma of fresh baked goods. We're located in the heart of Haryana.
           </p>
         </div>
       </section>
@@ -146,39 +146,6 @@ const Visit = () => {
         </div>
       </section>
 
-      {/* How to Reach Us */}
-      {/* <section className="py-20 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in">
-              How to Reach Us
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-up">
-              Multiple convenient ways to visit our bakery in the heart of Delhi
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {directions.map((direction, index) => (
-              <Card 
-                key={index} 
-                className="p-6 text-center hover-lift hover-tilt shadow-soft hover:shadow-strong transition-all duration-500 animate-bounce-in border-0 bg-card group"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 hover-glow animate-float group-hover:animate-pulse-slow">
-                  <direction.icon className="w-8 h-8 text-white transform group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                  {direction.title}
-                </h3>
-                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                  {direction.description}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 bg-background">
