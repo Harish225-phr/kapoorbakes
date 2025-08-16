@@ -2,19 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/icon.jpg" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Kapoor Bakers - Fresh Handmade Bakery Items</title>
     <meta name="description" content="Premium bakery in serving fresh bread, pastries, cakes & more. Made with love using traditional techniques. Visit Kapoor Bakers for authentic baked goods." />
-  <meta name="author" content="Kapoor Bakers" />
-<meta property="og:title" content="Kapoor Bakers - Fresh Handmade Bakery Items" />
-<meta name="twitter:site" content="@kapoorbakers" />
-<meta name="google-site-verification" content="QmLenZjssHhZsT4svSP3qnw4r9Ec-FXgzBrW7YVcS-Y" />
+    <meta name="author" content="Kapoor Bakers" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Kapoor Bakers - Fresh Handmade Bakery Items" />
+    <meta name="twitter:site" content="@kapoorbakers" />
+    <meta name="google-site-verification" content="QmLenZjssHhZsT4svSP3qnw4r9Ec-FXgzBrW7YVcS-Y" />
+
+    <!-- Favicon (absolute URL) -->
+    <link rel="icon" href="https://kapoorbakers.com/icon.jpg" type="image/png" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Organization Schema (absolute URL for logo) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://kapoorbakers.com",
+      "logo": "https://kapoorbakers.com/icon.jpg",
+      "name": "Kapoor Bakers"
+    }
+    </script>
   </body>
 </html>
