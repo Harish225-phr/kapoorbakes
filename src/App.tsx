@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">
